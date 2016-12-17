@@ -1,4 +1,4 @@
-/** DQValidation.java
+/** DQMeasurement.java
  * Copyright 2016 President and Fellows of Harvard College
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,31 +16,30 @@
 package org.datakurator.ffdq.api;
 
 /**
- * Created by lowery on 12/14/16.
+ * Interface for returning results from FIT4U Framework measurements.
  * 
- * @author lowery
- * @author mole
+ * @author mole 
  */
-public interface DQValidation {
+public interface DQMeasurement {
 	
 	/**
-	 * Obtain the result state (completed or some problem condition) of the validation.
+	 * Obtain the result state (completed or some problem condition) of the measurement.
 	 * 
-	 * @return the result state of the test that attempted to perform a validation, EnumDQResultState.COMPLETED if successful.
-	 */
+	 * @return the result state of the test that attempted to meake a mesaurement, EnumDQResultState.COMPLETED if successful.
+	 */	
+	
     EnumDQValidationState getResultState();
-    
     /**
-     * Obtain the result of the validation test.
+     * Obtain the value of the measurement.
      * 
-     * @return the result of the test.
+     * @return the value of the measurement (which may be a DQMesurementResult or a numeric value.
      */
-    EnumDQValidationResult getResult();
+    Object getValue();
     
     /**
      * Obtain the human readable comments associated with the proposed amendment.
      * 
      * @return a string comment.
-     */
+     */    
     String getComment();
 }

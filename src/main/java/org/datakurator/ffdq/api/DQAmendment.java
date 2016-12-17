@@ -1,4 +1,4 @@
-/** DQValidation.java
+/** DQAmendment.java
  * Copyright 2016 President and Fellows of Harvard College
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,28 +15,29 @@
  */
 package org.datakurator.ffdq.api;
 
+import java.util.Map;
+
 /**
  * Created by lowery on 12/14/16.
  * 
  * @author lowery
- * @author mole
+ * @author mole 
  */
-public interface DQValidation {
-	
+public interface DQAmendment {
 	/**
-	 * Obtain the result state (completed or some problem condition) of the validation.
+	 * Obtain the result state (completed or some problem condition) of the amendment.
 	 * 
-	 * @return the result state of the test that attempted to perform a validation, EnumDQResultState.COMPLETED if successful.
+	 * @return the result state of the test that attempted to assert an amendment, DQResultState.COMPLETED if successful.
+	 * @see DQResultState
 	 */
-    EnumDQValidationState getResultState();
-    
+    QCResultState getResultState();
     /**
-     * Obtain the result of the validation test.
+     * Obtain a map of keys and values for the terms and new values proposed by the amendment.
      * 
-     * @return the result of the test.
+     * @param key ? key to check for ?
+     * @return a Map<key, value> of the new values and the terms they are proposed to apply to.
      */
-    EnumDQValidationResult getResult();
-    
+    Map<String, String> getResult(String key);
     /**
      * Obtain the human readable comments associated with the proposed amendment.
      * 
