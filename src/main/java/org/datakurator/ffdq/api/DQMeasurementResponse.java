@@ -1,4 +1,4 @@
-/** DQMeasurement.java
+/** DQMeasurementResponse.java
  * Copyright 2016 President and Fellows of Harvard College
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +20,7 @@ package org.datakurator.ffdq.api;
  * 
  * @author mole 
  */
-public interface DQMeasurement {
+public interface DQMeasurementResponse {
 	
 	/**
 	 * Obtain the result state (completed or some problem condition) of the measurement.
