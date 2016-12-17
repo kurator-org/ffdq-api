@@ -27,15 +27,16 @@ public interface DQAmendment {
 	/**
 	 * Obtain the result state (completed or some problem condition) of the amendment.
 	 * 
-	 * @return the result state of the test that attempted to assert an amendment, DQResultState.COMPLETED if successful.
-	 * @see DQResultState
+	 * @return the result state of the test that attempted to assert an amendment, EnumDQResultState.COMPLETED if successful.
+	 * 
+	 * @see org.datakurator.ffdq.api.EnumDQResultState
 	 */
-    QCResultState getResultState();
+    EnumDQResultState getResultState();
     /**
      * Obtain a map of keys and values for the terms and new values proposed by the amendment.
      * 
      * @param key ? key to check for ?
-     * @return a Map<key, value> of the new values and the terms they are proposed to apply to.
+     * @return a Map key, value of the new values and the terms they are proposed to apply to.
      */
     Map<String, String> getResult(String key);
     /**
