@@ -1,4 +1,4 @@
-/** EnumDQREsultState.java
+/** EnumDQResultState.java
  * Copyright 2016 President and Fellows of Harvard College
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
