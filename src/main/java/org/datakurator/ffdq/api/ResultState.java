@@ -1,4 +1,5 @@
-/** DQValidationResponse.java
+/** ResultState.java
+ * 
  * Copyright 2016 President and Fellows of Harvard College
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,31 +17,25 @@
 package org.datakurator.ffdq.api;
 
 /**
- * Created by lowery on 12/14/16.
+ * Interface to allow extensible enumeration of ResultStates.
  * 
- * @author lowery
  * @author mole
+ *
  */
-public interface DQValidationResponse {
+public interface ResultState {
+	
+	/** Obtain the name of the result state 
+	 * 
+	 * @return the name.
+	 * @see java.lang.Enum name
+	 */
+	public String getName();
 	
 	/**
-	 * Obtain the result state (completed or some problem condition) of the validation.
+	 * Does this result type indicate that the test completed?
 	 * 
-	 * @return the result state of the test that attempted to perform a validation, EnumDQResultState.COMPLETED if successful.
+	 * @return true if the result indicates completion (with success or failure), otherwise false.
 	 */
-	ResultState getResultState();
-    
-    /**
-     * Obtain the result of the validation test.
-     * 
-     * @return the result of the test.
-     */
-    EnumDQValidationResult getResult();
-    
-    /**
-     * Obtain the human readable comments associated with the proposed amendment.
-     * 
-     * @return a string comment.
-     */
-    String getComment();
+	public boolean isComplete();
+
 }

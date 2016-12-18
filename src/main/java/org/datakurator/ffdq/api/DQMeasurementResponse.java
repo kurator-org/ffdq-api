@@ -28,7 +28,7 @@ public interface DQMeasurementResponse {
 	 * @return the result state of the test that attempted to meake a mesaurement, EnumDQResultState.COMPLETED if successful.
 	 */	
 	
-    EnumDQValidationState getResultState();
+    ResultState getResultState();
     /**
      * Obtain the value of the measurement.
      * 
