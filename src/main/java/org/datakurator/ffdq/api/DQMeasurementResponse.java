@@ -20,7 +20,7 @@ package org.datakurator.ffdq.api;
  * 
  * @author mole 
  */
-public interface DQMeasurementResponse {
+public interface DQMeasurementResponse<T> {
 	
 	/**
 	 * Obtain the result state (completed or some problem condition) of the measurement.
@@ -32,9 +32,9 @@ public interface DQMeasurementResponse {
     /**
      * Obtain the value of the measurement.
      * 
-     * @return the value of the measurement (which may be a DQMesurementResult or a numeric value.
+     * @return the value of the measurement (which may be a DQMesurementResult or a numeric value).
      */
-    Object getValue();
+    T getValue();
     
     /**
      * Obtain the human readable comments associated with the proposed amendment.
