@@ -23,68 +23,20 @@ import java.util.concurrent.ConcurrentMap;
  * Applies generally to results of measurements, validations, and amendments.  
  * Extended for amendments.
  * 
+ * Extensible using the method described in https://blogs.oracle.com/darcy/entry/enums_and_mixins 
+ * used in javax.tools.StandardLocation, javax.tools.FileManager.Location 
+ * 
  * Created by lowery on 12/14/16.
  * @author lowery
  * @author mole
  */
-public enum EnumDQResultState implements ResultState {
-    NOT_RUN,
-    AMBIGUOUS, 
-    INTERNAL_PREREQUISITES_NOT_MET,
-    EXTERNAL_PREREQUISITES_NOT_MET,
-    RUN_HAS_RESULT;
-
-	@Override
-	public String getName() {
-		// return the exact name of the enum instance.
-		return name();
-	}
-
-	@Override
-	public boolean isComplete() {
-		boolean result = false;
-		if(this==AMBIGUOUS ||
-		   this==RUN_HAS_RESULT || 
-		   this==INTERNAL_PREREQUISITES_NOT_MET ||
-		   this==EXTERNAL_PREREQUISITES_NOT_MET
-		   ) 
-		{ 
-			result = true;
-		}
-		return false;
-	}
+public class EnumDQResultState {
 	
-	/**
-	 * Allow extension of the enumeration by adding strings that can lookup the 
-	 */
-    private static ConcurrentMap<String,ResultState> resultTypes = new ConcurrentHashMap<String,ResultState>();	
-    
-    /** Factory method to add result types to the enumeration.
-     * 
-     * @param name the name of the result type.
-     * @param isComplete value to return on calling isComplete() on the returned resultType object.
-     * 
-     * @return a ResultState object conforming to the provided name and isComplete value
-     */
-    public static ResultState resultTypeFor(final String name, final boolean isComplete) {
-    	// make sure that map of result types is populated with values from standard enum
-        if (resultTypes.isEmpty()) {
-        	for(EnumDQResultState c : EnumDQResultState.values()) {
-                resultTypes.putIfAbsent(c.getName(), c);
-        	}
-        }
-        // then, if it is new, add the provided string.
-        resultTypes.putIfAbsent(
-        		name.toString(), 
-        		new ResultState() {
-                    public String getName() { 
-                    	return name; 
-                    }
-                    public boolean isComplete() { 
-                	     return isComplete; 
-                    }
-                }
-        );
-        return resultTypes.get(name);
-    }
+	// values from EnumDQResultState
+	public static final ResultState NOT_RUN = EnumActualDQResultState.resultTypeFor("NOT_RUN", false);
+	public static final ResultState AMBIGUOUS = EnumActualDQResultState.resultTypeFor("AMBIGUOUS", true);
+	public static final ResultState INTERNAL_PREREQUISITES_NOT_MET  = EnumActualDQResultState.resultTypeFor("INTERNAL_PREREQUISITES_NOT_MET", true);
+	public static final ResultState EXTERNAL_PREREQUISITES_NOT_MET = EnumActualDQResultState.resultTypeFor("EXTERNAL_PREREQUISITES_NOT_MET", true);
+	public static final ResultState RUN_HAS_RESULT = EnumActualDQResultState.resultTypeFor("RUN_HAS_RESULT", true);
+	
 }
