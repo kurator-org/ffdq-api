@@ -11,7 +11,8 @@ public class EnumDQAmendmentResultState extends EnumDQResultState {
 
 	// extended values for amendments
 	public static final ResultState TRANSPOSED = EnumActualDQResultState.resultTypeFor("TRANSPOSED", true); 
-	public static final ResultState CHANGED = EnumActualDQResultState.resultTypeFor("CHANGED", true); 
+	public static final ResultState CHANGED = EnumActualDQResultState.resultTypeFor("CHANGED", true);
+	public static final ResultState FILLED_IN = EnumActualDQResultState.resultTypeFor("FILLED_IN", true);
 	public static final ResultState NO_CHANGE = EnumActualDQResultState.resultTypeFor("NO_CHANGE", true); 
 	
 }
