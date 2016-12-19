@@ -6,7 +6,7 @@
 
     <groupId>org.datakurator</groupId>
     <artifactId>ffdq-api</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <name>FIT4UF-API</name>
     <description>API to support data quality reporting in the context of the Fittness For Use Framework.</description>
