@@ -14,7 +14,7 @@ public class EnumDQAmendmentResultState {
 	public static final ResultState AMBIGUOUS = EnumDQResultState.resultTypeFor("AMBIGUOUS", true);
 	public static final ResultState INTERNAL_PREREQUISITES_NOT_MET  = EnumDQResultState.resultTypeFor("INTERNAL_PREREQUISITES_NOT_MET", true);
 	public static final ResultState EXTERNAL_PREREQUISITES_NOT_MET = EnumDQResultState.resultTypeFor("EXTERNAL_PREREQUISITES_NOT_MET", true);
-	public static final ResultState COMPLETED = EnumDQResultState.resultTypeFor("COMPLETED", true);
+	public static final ResultState RUN_HAS_RESULT = EnumDQResultState.resultTypeFor("RUN_HAS_RESULT", true);
 	
 	// extended values for amendments
 	public static final ResultState TRANSPOSED = EnumDQResultState.resultTypeFor("TRANSPOSED", true); 

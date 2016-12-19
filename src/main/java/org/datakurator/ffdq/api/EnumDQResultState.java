@@ -32,7 +32,7 @@ public enum EnumDQResultState implements ResultState {
     AMBIGUOUS, 
     INTERNAL_PREREQUISITES_NOT_MET,
     EXTERNAL_PREREQUISITES_NOT_MET,
-    COMPLETED;
+    RUN_HAS_RESULT;
 
 	@Override
 	public String getName() {
@@ -44,7 +44,7 @@ public enum EnumDQResultState implements ResultState {
 	public boolean isComplete() {
 		boolean result = false;
 		if(this==AMBIGUOUS ||
-		   this==COMPLETED || 
+		   this==RUN_HAS_RESULT || 
 		   this==INTERNAL_PREREQUISITES_NOT_MET ||
 		   this==EXTERNAL_PREREQUISITES_NOT_MET
 		   ) 
