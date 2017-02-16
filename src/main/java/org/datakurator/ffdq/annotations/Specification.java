@@ -6,11 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by lowery on 12/19/16.
+ * Created by lowery on 2/15/2017.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface Validation {
-    String label();
-    String description();
+public @interface Specification {
+    String value();
 }
