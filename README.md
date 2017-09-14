@@ -2,6 +2,11 @@
 
 API for making Fittness For Use Framework assertions in Data Quality reports.
 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.891415.svg)](https://doi.org/10.5281/zenodo.891415)
+
+
+
 # Include using maven
 
 Available in Maven Central
