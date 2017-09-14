@@ -9,7 +9,7 @@ Available in Maven Central
     <dependency>
         <groupId>org.datakurator</groupId>
         <artifactId>ffdq-api</artifactId>
-        <version>0.0.1</version>
+        <version>1.0.3</version>
     </dependency>
 
 # Using
