@@ -21,6 +21,7 @@ import org.datakurator.ffdq.model.Entity;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
@@ -28,7 +29,7 @@ public class AmendmentValue implements ResultValue {
     private int score = 1; // TODO: For ranking of alternatives
 
     private String uuid = "urn:uuid:" + UUID.randomUUID();
-    private Map<String, String> value;
+    private Map<String, String> value = new HashMap<String, String>();
 
     public AmendmentValue(Map<String, String> value) {
         this.value = value;
