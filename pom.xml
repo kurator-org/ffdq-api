@@ -35,6 +35,14 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.cyberborean</groupId>
+            <artifactId>rdfbeans</artifactId>
+            <version>2.2</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
