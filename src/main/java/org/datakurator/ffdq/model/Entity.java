@@ -29,7 +29,7 @@ import java.util.UUID;
 })
 @RDFBean("prov:Entity")
 public class Entity {
-    private String id = "urn:uuid" + UUID.randomUUID();
+    private String id = "urn:uuid:" + UUID.randomUUID();
     private Object value;
 
     @RDFSubject
