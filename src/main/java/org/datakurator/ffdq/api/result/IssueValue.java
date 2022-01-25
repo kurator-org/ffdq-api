@@ -30,4 +30,9 @@ public class IssueValue implements ResultValue {
 
     public static IssueValue PROBLEM = new IssueValue("PROBLEM");
     public static IssueValue NOT_PROBLEM = new IssueValue("NOT_PROBLEM");
+    
+    public String getLabel() { 
+    	return value;
+    }
+    
 }

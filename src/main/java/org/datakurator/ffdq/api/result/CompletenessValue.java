@@ -46,4 +46,8 @@ public class CompletenessValue implements ResultValue {
 
     public static CompletenessValue COMPLETE = new CompletenessValue("COMPLETE");
     public static CompletenessValue NOT_COMPLETE = new CompletenessValue("NOT_COMPLETE");
+    
+    public String getLabel() { 
+    	return value;
+    }
 }

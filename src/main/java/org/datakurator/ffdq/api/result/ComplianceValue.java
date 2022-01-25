@@ -46,4 +46,8 @@ public class ComplianceValue implements ResultValue {
 
     public static ComplianceValue COMPLIANT = new ComplianceValue("COMPLIANT");
     public static ComplianceValue NOT_COMPLIANT = new ComplianceValue("NOT_COMPLIANT");
+
+	public String getLabel() {
+		return value;
+	}
 }
