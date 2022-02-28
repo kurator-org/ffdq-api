@@ -58,17 +58,33 @@ public class ResultState {
         this.label = label;
     }
 
-    public static ResultState RUN_HAS_RESULT = new ResultState("HAS_RESULT");
-    public static ResultState NOT_RUN = new ResultState("NOT_RUN");
-    public static ResultState AMBIGUOUS = new ResultState("AMBIGUOUS");
-    public static ResultState UNABLE_CURATE = new ResultState("UNABLE_CURATE");
+    // for all tests
+    
     public static ResultState INTERNAL_PREREQUISITES_NOT_MET = new ResultState("DATA_PREREQUISITES_NOT_MET");
     public static ResultState EXTERNAL_PREREQUISITES_NOT_MET = new ResultState("EXTERNAL_PREREQUISITES_NOT_MET");
+    
+    // for validations and measures
+    
+    public static ResultState RUN_HAS_RESULT = new ResultState("HAS_RESULT");
 
-    public static ResultState CHANGED = new ResultState("CHANGED");
+    // for amendments
+    
+    public static ResultState AMENDED = new ResultState("AMENDED");
+    public static ResultState NOT_AMENDED = new ResultState("NOT_AMENDED");
+    
+    // State for an unused Response object
+    public static ResultState NOT_RUN = new ResultState("NOT_RUN");
+ 
+    // subtypes of amendments
+    @Deprecated
+    /** use ResultState.NOT_AMENDED with ambiguity described in comments.  */
+    public static ResultState AMBIGUOUS = new ResultState("AMBIGUOUS");
+    @Deprecated
+    /**  use ResultState.AMENDED with note that empty values are being filled in in comments */
     public static ResultState FILLED_IN = new ResultState("FILLED_IN");
+    @Deprecated
+    /** use ResultState.AMENDED with transposition described in comments */
     public static ResultState TRANSPOSED = new ResultState("TRANSPOSED");
-    public static ResultState NO_CHANGE = new ResultState("NO_CHANGE");
 
     @Override
     public boolean equals(Object obj) {
