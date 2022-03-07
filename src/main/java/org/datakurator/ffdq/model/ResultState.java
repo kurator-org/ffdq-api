@@ -60,12 +60,12 @@ public class ResultState {
 
     // for all tests
     
-    public static ResultState INTERNAL_PREREQUISITES_NOT_MET = new ResultState("DATA_PREREQUISITES_NOT_MET");
+    public static ResultState INTERNAL_PREREQUISITES_NOT_MET = new ResultState("INTERNAL_PREREQUISITES_NOT_MET");
     public static ResultState EXTERNAL_PREREQUISITES_NOT_MET = new ResultState("EXTERNAL_PREREQUISITES_NOT_MET");
     
     // for validations and measures
     
-    public static ResultState RUN_HAS_RESULT = new ResultState("HAS_RESULT");
+    public static ResultState RUN_HAS_RESULT = new ResultState("RUN_HAS_RESULT");
 
     // for amendments
     
