@@ -10,9 +10,10 @@ package org.datakurator.ffdq.api;
 public class EnumDQAmendmentResultState extends EnumDQResultState {
 
 	// extended values for amendments
-	public static final ResultState TRANSPOSED = EnumActualDQResultState.resultTypeFor("TRANSPOSED", true); 
 	public static final ResultState AMENDED = EnumActualDQResultState.resultTypeFor("AMENDED", true);
 	public static final ResultState FILLED_IN = EnumActualDQResultState.resultTypeFor("FILLED_IN", true);
 	public static final ResultState NOT_AMENDED = EnumActualDQResultState.resultTypeFor("NOT_AMENDED", true); 
+	@Deprecated
+	public static final ResultState TRANSPOSED = EnumActualDQResultState.resultTypeFor("TRANSPOSED", true); 
 	
 }

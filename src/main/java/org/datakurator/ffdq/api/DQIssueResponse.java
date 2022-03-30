@@ -1,6 +1,7 @@
-/** DQMeasurementResponse.java
+/**
+ * DQIssueResponse.java
  * 
- * Copyright 2016 President and Fellows of Harvard College
+ * Copyright 2022 President and Fellows of Harvard College
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,31 +17,34 @@
  */
 package org.datakurator.ffdq.api;
 
+
 /**
- * Interface for returning results from FIT4U Framework measurements.
+ * Interface for responses for Issues from Problems, inverse of DQValidationResponse.
  * 
- * @author mole 
+ * @author mole
+ *
  */
-public interface DQMeasurementResponse<T> {
+public interface DQIssueResponse {
 	
 	/**
-	 * Obtain the result state (completed or some problem condition) of the measurement.
+	 * Obtain the result state (completed or some problem condition) of the issue.
 	 * 
-	 * @return the result state of the test that attempted to make a measurement, EnumDQResultState.RUN_HAS_RESULT if successful.
-	 */	
-	
-    ResultState getResultState();
-    /**
-     * Obtain the value of the measurement.
-     * 
-     * @return the value of the measurement (which may be a DQMesurementResult or a numeric value).
-     */
-    T getValue();
+	 * @return the result state of the test that attempted to perform a issue, EnumDQResultState.RUN_HAS_RESULT if successful.
+	 */
+	ResultState getResultState();
     
     /**
-     * Obtain the human readable comments associated with the measurement.
+     * Obtain the result of the problem test.
+     * 
+     * @return the result of the test.
+     */
+    EnumDQValidationResult getResult();
+    
+    /**
+     * Obtain the human readable comments associated with the issue.
      * 
      * @return a string comment.
-     */    
+     */
     String getComment();
+
 }

@@ -26,7 +26,7 @@ public interface DQValidationResponse {
 	/**
 	 * Obtain the result state (completed or some problem condition) of the validation.
 	 * 
-	 * @return the result state of the test that attempted to perform a validation, EnumDQResultState.COMPLETED if successful.
+	 * @return the result state of the test that attempted to perform a validation, EnumDQResultState.RUN_HAS_RESULT if successful.
 	 */
 	ResultState getResultState();
     
@@ -38,7 +38,7 @@ public interface DQValidationResponse {
     EnumDQValidationResult getResult();
     
     /**
-     * Obtain the human readable comments associated with the proposed amendment.
+     * Obtain the human readable comments associated with the validation.
      * 
      * @return a string comment.
      */
