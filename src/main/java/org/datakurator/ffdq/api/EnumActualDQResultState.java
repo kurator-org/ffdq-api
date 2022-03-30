@@ -46,15 +46,11 @@ enum EnumActualDQResultState implements ResultState {
 	@Override
 	public boolean isComplete() {
 		boolean result = false;
-		if(this==AMBIGUOUS ||
-		   this==RUN_HAS_RESULT || 
-		   this==INTERNAL_PREREQUISITES_NOT_MET ||
-		   this==EXTERNAL_PREREQUISITES_NOT_MET
-		   ) 
+		if(this!=NOT_RUN)
 		{ 
 			result = true;
 		}
-		return false;
+		return result;
 	}
 	
 	/**
