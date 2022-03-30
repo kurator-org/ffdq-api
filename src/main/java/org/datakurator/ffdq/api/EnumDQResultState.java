@@ -34,6 +34,7 @@ public class EnumDQResultState {
 	
 	// values from EnumDQResultState
 	public static final ResultState NOT_RUN = EnumActualDQResultState.resultTypeFor("NOT_RUN", false);
+	@Deprecated
 	public static final ResultState AMBIGUOUS = EnumActualDQResultState.resultTypeFor("AMBIGUOUS", true);
 	public static final ResultState INTERNAL_PREREQUISITES_NOT_MET  = EnumActualDQResultState.resultTypeFor("INTERNAL_PREREQUISITES_NOT_MET", true);
 	public static final ResultState EXTERNAL_PREREQUISITES_NOT_MET = EnumActualDQResultState.resultTypeFor("EXTERNAL_PREREQUISITES_NOT_MET", true);
