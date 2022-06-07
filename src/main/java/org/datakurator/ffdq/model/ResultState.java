@@ -69,8 +69,9 @@ public class ResultState {
 
     // for amendments
     
-    public static ResultState AMENDED = new ResultState("AMENDED");
-    public static ResultState NOT_AMENDED = new ResultState("NOT_AMENDED");
+    public static ResultState AMENDED = new ResultState("AMENDED");  // non-empty value was changed
+    public static ResultState NOT_AMENDED = new ResultState("NOT_AMENDED");  // value was not changed
+    public static ResultState FILLED_IN = new ResultState("FILLED_IN");  // empty value was filled in
     
     // State for an unused Response object
     public static ResultState NOT_RUN = new ResultState("NOT_RUN");
@@ -79,9 +80,6 @@ public class ResultState {
     @Deprecated
     /** use ResultState.NOT_AMENDED with ambiguity described in comments.  */
     public static ResultState AMBIGUOUS = new ResultState("AMBIGUOUS");
-    @Deprecated
-    /**  use ResultState.AMENDED with note that empty values are being filled in in comments */
-    public static ResultState FILLED_IN = new ResultState("FILLED_IN");
     @Deprecated
     /** use ResultState.AMENDED with transposition described in comments */
     public static ResultState TRANSPOSED = new ResultState("TRANSPOSED");

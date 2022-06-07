@@ -7,11 +7,11 @@ public class IssueValue implements ResultValue {
     private final String value;
 
     private IssueValue(String value) {
-        if (value.equalsIgnoreCase("PROBLEM") || value.equalsIgnoreCase("NOT_PROBLEM")) {
+        if (value.equalsIgnoreCase("PROBLEM") || value.equalsIgnoreCase("NOT_PROBLEM") || value.equalsIgnoreCase("POTENTIAL_PROBLEM")) {
             this.value = value;
         } else {
-            throw new IllegalArgumentException("Invalid value " + value + " for a validation result. Must be either " +
-                    "\"PROBLEM\" or \"NOT_PROBLEM\".");
+            throw new IllegalArgumentException("Invalid value " + value + " for a validation result. Must one of " +
+                   "\"PROBLEM\", \"POTENTIAL_PROBLEM\" or \"NOT_PROBLEM\".");
         }
     }
 
@@ -30,6 +30,7 @@ public class IssueValue implements ResultValue {
 
     public static IssueValue PROBLEM = new IssueValue("PROBLEM");
     public static IssueValue NOT_PROBLEM = new IssueValue("NOT_PROBLEM");
+    public static IssueValue POTENTIAL_PROBLEM = new IssueValue("POTENTIAL_PROBLEM");
     
     public String getLabel() { 
     	return value;
