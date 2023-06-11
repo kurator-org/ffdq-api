@@ -7,11 +7,11 @@ public class IssueValue implements ResultValue {
     private final String value;
 
     private IssueValue(String value) {
-        if (value.equalsIgnoreCase("PROBLEM") || value.equalsIgnoreCase("NOT_PROBLEM") || value.equalsIgnoreCase("POTENTIAL_PROBLEM")) {
+        if (value.equalsIgnoreCase("IS_ISSUE") || value.equalsIgnoreCase("NOT_ISSUE") || value.equalsIgnoreCase("POTENTIAL_ISSUE")) {
             this.value = value;
         } else {
             throw new IllegalArgumentException("Invalid value " + value + " for a validation result. Must one of " +
-                   "\"PROBLEM\", \"POTENTIAL_PROBLEM\" or \"NOT_PROBLEM\".");
+                   "\"IS_ISSUE\", \"POTENTIAL_ISSUE\" or \"NOT_ISSUE\".");
         }
     }
 
@@ -28,9 +28,9 @@ public class IssueValue implements ResultValue {
         return entity;
     }
 
-    public static IssueValue PROBLEM = new IssueValue("PROBLEM");
-    public static IssueValue NOT_PROBLEM = new IssueValue("NOT_PROBLEM");
-    public static IssueValue POTENTIAL_PROBLEM = new IssueValue("POTENTIAL_PROBLEM");
+    public static IssueValue IS_ISSUE = new IssueValue("IS_ISSUE");
+    public static IssueValue NOT_ISSUE = new IssueValue("NOT_ISSUE");
+    public static IssueValue POTENTIAL_ISSUE = new IssueValue("POTENTIAL_ISSUE");
     
     public String getLabel() { 
     	return value;
