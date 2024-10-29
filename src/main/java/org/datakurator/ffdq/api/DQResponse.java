@@ -18,6 +18,15 @@ package org.datakurator.ffdq.api;
 
 import org.datakurator.ffdq.model.ResultState;
 
+/**
+ * A DQResponse is a representation of a bdqffdq:Assertion, 
+ * it is composed of a Response.status, Response.result, and
+ * Response.comment.  The Response.status is represented here by
+ * a ResultState, the Response.result by the ResultValue type
+ * and the Response.comment by the resultComment.
+ * 
+ * @param <T> the type of the ResultValue for this response.
+ */
 public class DQResponse<T extends ResultValue> {
     private ResultState resultState;
     private T value;

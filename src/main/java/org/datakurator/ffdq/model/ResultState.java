@@ -21,12 +21,15 @@ import org.cyberborean.rdfbeans.annotations.RDFBean;
 import org.cyberborean.rdfbeans.annotations.RDFNamespaces;
 import org.cyberborean.rdfbeans.annotations.RDFSubject;
 
+/**
+ * Class corresponding to bdqffdq:ResponseStatus
+ */
 @RDFNamespaces({
-        "ffdq = http://example.com/ffdq/",
+        "bdqffdq = http://rs.tdwg.org/bdqffdq/terms/",
         "rdfs = http://www.w3.org/2000/01/rdf-schema#",
         "rs = http://example.com/ffdq/rs/"
 })
-@RDFBean("ffdq:ResultState")
+@RDFBean("bdqffdq:ResponseStatus")
 public class ResultState {
     private String id;
     private String label;
@@ -78,10 +81,10 @@ public class ResultState {
  
     // subtypes of amendments
     @Deprecated
-    /** use ResultState.NOT_AMENDED with ambiguity described in comments.  */
+    /** use ResultState.NOT_AMENDED with ambiguity described in comments or response.qualifiers. */
     public static ResultState AMBIGUOUS = new ResultState("AMBIGUOUS");
     @Deprecated
-    /** use ResultState.AMENDED with transposition described in comments */
+    /** use ResultState.AMENDED with transposition described in comments or response qualifiers */
     public static ResultState TRANSPOSED = new ResultState("TRANSPOSED");
 
     @Override

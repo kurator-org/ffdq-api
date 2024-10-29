@@ -18,6 +18,10 @@ package org.datakurator.ffdq.api;
 
 import org.datakurator.ffdq.model.Entity;
 
+/**
+ * Interface corresponding to bdqffdq:ResponseResult and bdqffdq:hasResponseResultValue
+ * accommodating instances of bdqffdq:ResponseResult. numbers, and string literals.
+ */
 public interface ResultValue {
     Object getObject();
     Entity getEntity();
