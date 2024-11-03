@@ -19,6 +19,9 @@ package org.datakurator.ffdq.api.result;
 import org.datakurator.ffdq.api.ResultValue;
 import org.datakurator.ffdq.model.Entity;
 
+/**
+ * Class corresponding to bdqffdq:ValidationAssertion.
+ */
 public class ComplianceValue implements ResultValue {
     private final String value;
 

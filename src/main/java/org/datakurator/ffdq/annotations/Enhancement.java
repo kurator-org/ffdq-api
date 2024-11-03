@@ -6,6 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * Annotation indicating an amendment phase of execution.
+ * 
  * Created by lowery on 2/16/17.
  */
 @Retention(RetentionPolicy.RUNTIME)

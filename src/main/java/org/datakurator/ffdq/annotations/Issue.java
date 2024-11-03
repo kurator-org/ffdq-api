@@ -6,6 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * Annotation for a method corresponding to an implementation of a bdqffdq:Issue
+ * 
  * Created by mole on 2022-03-30.
  */
 @Retention(RetentionPolicy.RUNTIME)

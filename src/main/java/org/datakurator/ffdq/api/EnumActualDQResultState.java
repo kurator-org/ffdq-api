@@ -31,8 +31,8 @@ import java.util.concurrent.ConcurrentMap;
  * @author mole
  */
 enum EnumActualDQResultState implements ResultState {
-    NOT_RUN,
-    AMBIGUOUS, 
+    NOT_RUN,  // initial state on creation before test execution.
+    AMBIGUOUS,  // Not used in bdqffdq
     INTERNAL_PREREQUISITES_NOT_MET,
     EXTERNAL_PREREQUISITES_NOT_MET,
     RUN_HAS_RESULT;

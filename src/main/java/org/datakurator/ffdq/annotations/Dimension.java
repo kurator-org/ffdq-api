@@ -1,5 +1,19 @@
 package org.datakurator.ffdq.annotations;
 
+/**
+ * Enumeration of DataQualityDimension terms.
+ * 
+ */
 public enum Dimension {
-    VALUE, VOCAB_MATCH, COMPLETENESS, ACCURACY, PRECISION, UNIQUENESS, RESOLUTION, CONFORMANCE, RELIABILITY, CONSISTENCY, LIKELYHOOD
+    COMPLETENESS, // bdqdim:Completeness
+    CONFORMANCE, // bdqdim:Conformance
+    CONSISTENCY, // bdqdim:Consistency
+    LIKELINESS, // bdqdim:Lokeliness
+    RELIABILITY, // bdqdim:Reliabiity
+    RESOLUTION, // bdqdim:Resolution
+    VALUE, 
+    VOCAB_MATCH, 
+    ACCURACY, 
+    PRECISION, 
+    UNIQUENESS
 }

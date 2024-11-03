@@ -17,6 +17,8 @@
 package org.datakurator.ffdq.api;
 
 /**
+ * Interface for bdqffdq:MeasureAssertion.
+ * 
  * Interface for returning results from FIT4U Framework measurements.
  * 
  * @author mole 

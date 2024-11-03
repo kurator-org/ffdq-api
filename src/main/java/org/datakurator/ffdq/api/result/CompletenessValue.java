@@ -19,6 +19,10 @@ package org.datakurator.ffdq.api.result;
 import org.datakurator.ffdq.api.ResultValue;
 import org.datakurator.ffdq.model.Entity;
 
+/**
+ * Class corresponding to object of bdqffdq:hasResponseResult for a bdqffdq:MeasureAssertion 
+ * that returns COMPLETE/NOT_COMPLETE.
+ */
 public class CompletenessValue implements ResultValue {
     private final String value;
 

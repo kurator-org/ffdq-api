@@ -23,6 +23,15 @@ import org.cyberborean.rdfbeans.annotations.RDFSubject;
 
 import java.util.UUID;
 
+/**
+ * Representation of prov:Entity that can be used as an abstraction
+ * of data objects associated with responses from tests (as objects
+ * for bdqffdq:hasResponseResult and other properties associated with
+ * bdqffdq:Assertion).
+ * 
+ * Enables serialization of results into RDF using RDFBeans.
+ * 
+ */
 @RDFNamespaces({
         "bdqffdq = http://rs.tdwg.org/bdqffdq/terms/",
         "prov = http://www.w3.org/ns/prov#"

@@ -18,6 +18,8 @@ package org.datakurator.ffdq.api;
 import java.util.Map;
 
 /**
+ * Interface for bdqffdq:AmendmentAssertion.
+ * 
  * Created by lowery on 12/14/16.
  * 
  * @author lowery

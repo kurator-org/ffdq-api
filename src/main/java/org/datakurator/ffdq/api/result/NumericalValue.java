@@ -18,7 +18,10 @@ package org.datakurator.ffdq.api.result;
 
 import org.datakurator.ffdq.api.ResultValue;
 import org.datakurator.ffdq.model.Entity;
-
+/**
+ * Class corresponding to object of bdqffdq:hasResponseResultValue for a bdqffdq:MeasureAssertion 
+ * that returns a numeric value.
+ */
 public class NumericalValue implements ResultValue {
     private final Number value;
 

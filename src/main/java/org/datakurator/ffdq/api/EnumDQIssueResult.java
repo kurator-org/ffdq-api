@@ -13,8 +13,8 @@ package org.datakurator.ffdq.api;
  */
 public enum EnumDQIssueResult {
 	
-	ISSUE,
+	IS_ISSUE,
 	POTENTIAL_ISSUE,
-	NO_ISSUE
+	NOT_ISSUE
 
 }

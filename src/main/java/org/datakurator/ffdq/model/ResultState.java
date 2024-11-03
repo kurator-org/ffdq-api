@@ -22,7 +22,7 @@ import org.cyberborean.rdfbeans.annotations.RDFNamespaces;
 import org.cyberborean.rdfbeans.annotations.RDFSubject;
 
 /**
- * Class corresponding to bdqffdq:ResponseStatus
+ * Class corresponding to bdqffdq:ResponseStatus.
  */
 @RDFNamespaces({
         "bdqffdq = http://rs.tdwg.org/bdqffdq/terms/",

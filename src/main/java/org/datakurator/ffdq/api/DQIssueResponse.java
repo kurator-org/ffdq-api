@@ -19,6 +19,8 @@ package org.datakurator.ffdq.api;
 
 
 /**
+ * Interface for bdqffdq:IssueAssertion.
+ * 
  * Interface for responses for Issues from Problems, inverse of DQValidationResponse.
  * 
  * @author mole

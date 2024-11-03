@@ -25,6 +25,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * Class corresponding to object of bdqffdq:hasResponseResultValue for a bdqffdq:AmendmentAssertion,
+ * with the value represented as a map of key:value pairs, with the term for which a change is 
+ * proposed as a key and the proposed new value as the value.
+ */
 public class AmendmentValue implements ResultValue {
     private int score = 1; // TODO: For ranking of alternatives
 

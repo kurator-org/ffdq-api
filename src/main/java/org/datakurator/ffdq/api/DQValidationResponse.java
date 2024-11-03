@@ -16,6 +16,9 @@
 package org.datakurator.ffdq.api;
 
 /**
+ * 
+ * Interface for bdqffdq:ValidationAssertion.
+ * 
  * Created by lowery on 12/14/16.
  * 
  * @author lowery
