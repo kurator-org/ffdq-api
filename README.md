@@ -14,7 +14,7 @@ Available in Maven Central
     <dependency>
         <groupId>org.datakurator</groupId>
         <artifactId>ffdq-api</artifactId>
-        <version>2.0.1</version>
+        <version>2.0.2</version>
     </dependency>
 
 # Using
