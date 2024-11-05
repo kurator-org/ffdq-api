@@ -20,7 +20,7 @@ import org.datakurator.ffdq.api.ResultValue;
 import org.datakurator.ffdq.model.Entity;
 
 /**
- * Class corresponding to bdqffdq:ValidationAssertion.
+ * Class corresponding to object of bdqffdq:hasResponseResult for a bdqffdq:ValidationAssertion.
  */
 public class ComplianceValue implements ResultValue {
     private final String value;
