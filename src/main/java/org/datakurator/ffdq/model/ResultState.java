@@ -19,9 +19,14 @@ package org.datakurator.ffdq.model;
 /**
  * Class corresponding to bdqffdq:ResponseStatus.
  *
+ * The labels of RUN_HAS_RESULT, AMENDED, NOT_AMENDED, FILLED_IN, INTERNAL_PREREQUISITES_NOT_MET, and
+ * EXTERNAL_PREREQUISITES_NOT_MET are those of the bdqffdq:ResponseStatus terms of the BDQ standard
+ * (e.g. https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT).  NOT_RUN, for a response object that
+ * has not been run, and the deprecated AMBIGUOUS and TRANSPOSED are not BDQ terms, and should not
+ * be returned by implementations of BDQ Tests.
+ *
  * This API has no RDF dependencies.  kurator-ffdq writes a ResultState as RDF (in
- * org.datakurator.ffdq.rdf.FfdqApiRdf) as an instance of http://rs.tdwg.org/bdqffdq/terms/ResponseStatus,
- * with the subject http://example.com/ffdq/rs/{id} and the label as its rdfs:label.
+ * org.datakurator.ffdq.rdf.FfdqApiRdf) as its bdqffdq:ResponseStatus term.
  */
 public class ResultState {
     private String id;
