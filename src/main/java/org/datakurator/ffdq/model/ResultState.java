@@ -16,20 +16,13 @@
  */
 package org.datakurator.ffdq.model;
 
-import org.cyberborean.rdfbeans.annotations.RDF;
-import org.cyberborean.rdfbeans.annotations.RDFBean;
-import org.cyberborean.rdfbeans.annotations.RDFNamespaces;
-import org.cyberborean.rdfbeans.annotations.RDFSubject;
-
 /**
  * Class corresponding to bdqffdq:ResponseStatus.
+ *
+ * This API has no RDF dependencies.  kurator-ffdq writes a ResultState as RDF (in
+ * org.datakurator.ffdq.rdf.FfdqApiRdf) as an instance of http://rs.tdwg.org/bdqffdq/terms/ResponseStatus,
+ * with the subject http://example.com/ffdq/rs/{id} and the label as its rdfs:label.
  */
-@RDFNamespaces({
-        "bdqffdq = http://rs.tdwg.org/bdqffdq/terms/",
-        "rdfs = http://www.w3.org/2000/01/rdf-schema#",
-        "rs = http://example.com/ffdq/rs/"
-})
-@RDFBean("bdqffdq:ResponseStatus")
 public class ResultState {
     private String id;
     private String label;
@@ -43,7 +36,6 @@ public class ResultState {
         // default constructor
     }
 
-    @RDFSubject(prefix = "rs:")
     public String getId() {
         return id;
     }
@@ -52,7 +44,6 @@ public class ResultState {
         this.id = id;
     }
 
-    @RDF("rdfs:label")
     public String getLabel() {
         return label;
     }

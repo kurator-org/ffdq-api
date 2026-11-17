@@ -35,24 +35,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-        	<!-- Not yet deployed on Maven Central with up to date rdf4j library dependencies, 
-               locally build and use fork at https://github.com/chicoreus/rdfbeans/tree/updatelibraries
-        	   if cyberborean repository won't build (https://github.com/cyberborean/rdfbeans).
-        	 -->
-            <groupId>org.cyberborean</groupId>
-            <artifactId>rdfbeans</artifactId>
-            <version>2.3-SNAPSHOT</version>
-        </dependency>
-<!--
-        <dependency>
-        	<groupId>org.eclipse.rdf4j</groupId>
-        	<artifactId>rdf4j-model</artifactId>
-        	<version>5.0.2</version>
-        </dependency>
--->
-    </dependencies>
 
     <build>
         <plugins>

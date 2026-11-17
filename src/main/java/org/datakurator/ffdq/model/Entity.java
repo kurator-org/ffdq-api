@@ -16,11 +16,6 @@
  */
 package org.datakurator.ffdq.model;
 
-import org.cyberborean.rdfbeans.annotations.RDF;
-import org.cyberborean.rdfbeans.annotations.RDFBean;
-import org.cyberborean.rdfbeans.annotations.RDFNamespaces;
-import org.cyberborean.rdfbeans.annotations.RDFSubject;
-
 import java.util.UUID;
 
 /**
@@ -29,19 +24,14 @@ import java.util.UUID;
  * for bdqffdq:hasResponseResult and other properties associated with
  * bdqffdq:Assertion).
  * 
- * Enables serialization of results into RDF using RDFBeans.
- * 
+ * This API has no RDF dependencies.  kurator-ffdq writes an Entity as RDF (in
+ * org.datakurator.ffdq.rdf.FfdqApiRdf) as a prov:Entity with the id as its subject
+ * and the value as its prov:value.
  */
-@RDFNamespaces({
-        "bdqffdq = http://rs.tdwg.org/bdqffdq/terms/",
-        "prov = http://www.w3.org/ns/prov#"
-})
-@RDFBean("prov:Entity")
 public class Entity {
     private String id = "urn:uuid:" + UUID.randomUUID();
     private Object value;
 
-    @RDFSubject
     public String getId() {
         return id;
     }
@@ -50,7 +40,6 @@ public class Entity {
         this.id = id;
     }
 
-    @RDF("prov:value")
     public Object getValue() {
         return value;
     }
