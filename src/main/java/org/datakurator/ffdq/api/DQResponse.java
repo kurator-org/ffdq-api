@@ -16,14 +16,20 @@
  */
 package org.datakurator.ffdq.api;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.datakurator.ffdq.model.ResponseQualifier;
 import org.datakurator.ffdq.model.ResultState;
 
 /**
  * A DQResponse is a representation of a bdqffdq:Assertion, 
  * it is composed of a Response.status, Response.result, and
- * Response.comment.  The Response.status is represented here by
- * a ResultState, the Response.result by the ResultValue type
- * and the Response.comment by the resultComment.
+ * Response.comment, and optionally Response.qualifiers.  The Response.status
+ * is represented here by a ResultState, the Response.result by the ResultValue
+ * type, the Response.comment by the resultComment, and the Response.qualifiers
+ * (bdqffdq:ResponseQualifier) by a list of ResponseQualifiers.
  * 
  * @param <T> the type of the ResultValue for this response.
  */
@@ -32,6 +38,7 @@ public class DQResponse<T extends ResultValue> {
     private T value;
 
     private StringBuffer resultComment;
+    private final List<ResponseQualifier> qualifiers = new ArrayList<>();
 
     public DQResponse() {
         resultState = ResultState.NOT_RUN;
@@ -73,5 +80,24 @@ public class DQResponse<T extends ResultValue> {
 
     public Object getObject() {
         return value.getObject();
+    }
+
+    /**
+     * Add a Response.qualifier (bdqffdq:ResponseQualifier), structured information that qualifies
+     * this response, e.g. about uncertainty or ambiguity.
+     *
+     * @param qualifier the qualifier
+     */
+    public void addQualifier(ResponseQualifier qualifier) {
+        if (qualifier != null) {
+            qualifiers.add(qualifier);
+        }
+    }
+
+    /**
+     * @return the Response.qualifiers of this response (unmodifiable, possibly empty)
+     */
+    public List<ResponseQualifier> getQualifiers() {
+        return Collections.unmodifiableList(qualifiers);
     }
 }
